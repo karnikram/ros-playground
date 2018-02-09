@@ -24,6 +24,6 @@ rosbag play overtaking2.bag --clock
 
 
 <div align="center">
-<img src="https://github.com/karnikram/visual-servoing/blob/master/screen-grab.png"/>
+<img src="https://github.com/karnikram/ros-playground/blob/master/velodyne_to_costmap/screen-grab.png"/>
 </div>
 
