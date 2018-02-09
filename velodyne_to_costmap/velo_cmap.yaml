@@ -1,0 +1,19 @@
+costmap:
+ publish_frequency: 5.0
+ footprint: [[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]
+ update_frequency: 5.0
+ rolling_window: true
+ global_frame: /odom
+ robot_base_frame: /velodyne
+ transform_tolerance: 1.0
+ static_map: false
+ height: 20
+ width: 20
+
+ plugins:
+  - {name: obstacles, type: "costmap_2d::ObstacleLayer"}
+  - {name: inflation, type: "costmap_2d::InflationLayer"}
+ obstacles:
+  obstacle_range: 20.0
+  observation_sources: point_cloud_sensor
+  point_cloud_sensor: {data_type: PointCloud2, sensor_frame: /velodyne, topic: /velodyne_points, marking: true, min_obstacle_height: -0.8, clearing: true, observation_persistence: 0.5}
