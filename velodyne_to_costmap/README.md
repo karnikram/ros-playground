@@ -1,3 +1,5 @@
+# velodyne_to_costmap
+
 Launch file and params for 2D occupancy grid mapping from 3D laser data. A local 2D CostMap in odom frame, that moves along with the robot, is used.
 
 Tested to work with ROS Kinetic, and VLP 16.  
